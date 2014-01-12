@@ -1,7 +1,7 @@
 {
   "name": "test-stream",
   "version": "0.0.0",
-  "description": "",
+  "description": "Readable and writable streams for tests.",
   "main": "index.js",
   "scripts": {
     "test": "mocha"
