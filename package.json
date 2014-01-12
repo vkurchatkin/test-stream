@@ -7,5 +7,6 @@
     "test": "mocha"
   },
   "author": "Vladimir Kurchatkin <vladimir.kurchatkin@gmail.com>",
+  "repository": "git://github.com/vkurchatkin/test-stream",
   "license": "MIT"
 }
