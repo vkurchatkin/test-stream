@@ -19,4 +19,20 @@ describe('Readable', function () {
       done()
     }
   })
+
+  it('should throw if no options passed', function () {
+    function bang () {
+      var rs = new Readable()
+    }
+
+    bang.should.throw()
+  })
+
+  it('should throw if no buffer passed', function () {
+    function bang () {
+      var rs = new Readable({})
+    }
+
+    bang.should.throw()
+  })
 })
