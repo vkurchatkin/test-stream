@@ -1,7 +1,7 @@
 require('should')
 
-var Readable = require('./../lib/readable.js')
-var Writable = require('./../lib/writable.js')
+var Readable = require('./..').Readable
+var Writable = require('./..').Writable
 
 var buffer = new Buffer([0x01, 0x02, 0x03, 0x04, 0x05, 0x06, 0x07, 0x08, 0x09])
 

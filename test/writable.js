@@ -1,6 +1,6 @@
 require('should')
 
-var Writable = require('./../lib/writable.js')
+var Writable = require('./..').Writable
 
 describe('Writable', function () {
   it('should bufferize stream', function (done) {
