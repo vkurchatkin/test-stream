@@ -3,6 +3,10 @@ require('should')
 var Writable = require('./..').Writable
 
 describe('Writable', function () {
+  it('should work as a function', function () {
+    Writable().should.be.instanceOf(Writable)
+  })
+
   it('should bufferize stream', function (done) {
     var stream = new Writable
 
