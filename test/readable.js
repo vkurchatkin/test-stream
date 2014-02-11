@@ -24,19 +24,25 @@ describe('Readable', function () {
     }
   })
 
-  it('should throw if no options passed', function () {
-    function bang () {
-      var rs = new Readable()
-    }
+  it('should end if no options passed', function (done) {
+    var rs = new Readable()
 
-    bang.should.throw()
+    rs.on('end', onEnd)
+    rs.resume()
+
+    function onEnd () {
+      done()
+    }
   })
 
-  it('should throw if no buffer passed', function () {
-    function bang () {
-      var rs = new Readable({})
-    }
+  it('should end if no buffer passed', function (done) {
+    var rs = new Readable({})
 
-    bang.should.throw()
+    rs.on('end', onEnd)
+    rs.resume()
+
+    function onEnd () {
+      done()
+    }
   })
 })
