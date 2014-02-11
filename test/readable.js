@@ -25,6 +25,24 @@ describe('Readable', function () {
     }
   })
 
+  it('give chunk of the specified size', function (done) {
+    var rs = new Readable({ buffer : buffer, size : 3 })
+    var counter = 0
+    
+    rs.on('data', onData)
+    rs.on('end', onEnd)
+
+    function onData (data) {
+      data.length.should.equal(3)
+      counter ++
+    }
+
+    function onEnd () {
+      counter.should.equal(3)
+      done()
+    }
+  })
+
   it('should work with array', function (done) {
     var rs = new Readable(bytes)
     var ws = new Writable
